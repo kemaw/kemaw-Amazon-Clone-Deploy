@@ -21,12 +21,7 @@ app.post("/payment/create", async (req, res) => {
       amount: total,
       currency: "usd",
     });
-    // console.log("payment received", total);
-    // const paymentIntent = await stripe.PaymentIntents.create({
-    //   amount: total,
-    //   currency: "usd",
-    //   // payment_method_types: ["card"],
-    // });
+    
     console.log(paymentIntent);
 
     res.status(201).json({
